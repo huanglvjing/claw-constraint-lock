@@ -1,0 +1,42 @@
+{
+  "name": "claw-constraint-lock",
+  "version": "1.0.0",
+  "description": "🔒 防止 OpenClaw 因上下文压缩遗忘你的约束指令 | Lock constraints so OpenClaw never forgets them",
+  "keywords": [
+    "openclaw",
+    "claude",
+    "ai-agent",
+    "constraint",
+    "safety",
+    "hook",
+    "cli"
+  ],
+  "author": "your-name",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/cli.js",
+  "bin": {
+    "claw-lock": "./dist/cli.js",
+    "claw-constraint-lock": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/cli.js",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  },
+  "dependencies": {
+    "@clack/prompts": "^1.1.0",
+    "commander": "^14.0.3"
+  }
+}
